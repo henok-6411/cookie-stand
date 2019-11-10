@@ -28,4 +28,4 @@ function randomNumberCustomer(max, min) {
 
 }
 randomNumberCustomer(65, 23);
-console.log(seattleCustomers.customersEachHour);
+// console.log(seattleCustomers.customersEachHour);
