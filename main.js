@@ -120,9 +120,9 @@ function RandomNumber(max, min) {
 
 var Dubai = {
   storeName: 'Dubai best cookie',
-  minCustomerEachHour: 3,
-  maxCustomerEachHour: 24,
-  averageCookiesPerCustomer: 1.2,
+  minCustomerEachHour: 11,
+  maxCustomerEachHour: 38,
+  averageCookiesPerCustomer: 3.7,
   customersEachHour: [],
   cookiesEachHour: [],
   totalCookiesForTheDay: 0,
@@ -175,9 +175,9 @@ function RandomNumber(max, min) {
 
 var paris = {
   storeName: 'Paris best cookie',
-  minCustomerEachHour: 3,
-  maxCustomerEachHour: 24,
-  averageCookiesPerCustomer: 1.2,
+  minCustomerEachHour: 20,
+  maxCustomerEachHour: 38,
+  averageCookiesPerCustomer: 2.3,
   customersEachHour: [],
   cookiesEachHour: [],
   totalCookiesForTheDay: 0,
@@ -230,9 +230,9 @@ function RandomNumber(max, min) {
 
 var Lima = {
   storeName: 'Lima best cookie',
-  minCustomerEachHour: 3,
-  maxCustomerEachHour: 24,
-  averageCookiesPerCustomer: 1.2,
+  minCustomerEachHour: 2,
+  maxCustomerEachHour: 16,
+  averageCookiesPerCustomer: 4.6,
   customersEachHour: [],
   cookiesEachHour: [],
   totalCookiesForTheDay: 0,
