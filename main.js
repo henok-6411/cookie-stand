@@ -281,12 +281,6 @@ function RandomNumber(max, min) {
   console.log(Math.floor(Math.random() * (max - min + 1)) + min);
   return Math.ceil(Math.random() * (max - min + 1)) + min;
 }
-
-
-
-
-
-
 seattle.render();
 tokyo.render();
 Dubai.render();
@@ -295,79 +289,342 @@ Lima.render();
 
 
 
+var table = document.getElementById('cookiesTable');
+var tbodyEl = document.createElement('tbody');
+var trEl = document.createElement('tr');
+var thEl = document.createElement('th');
+var tdEl = document.createElement('td');
+
+trEl = document.createElement('tr');
+thEl = document.createElement('th');
+thEl.textContent = '     ';
+trEl.appendChild(thEl);
+
+thEl = document.createElement('th');
+thEl.textContent = '6:00 am';
+trEl.appendChild(thEl);
+
+thEl = document.createElement('th');
+thEl.textContent = '7:00 am';
+trEl.appendChild(thEl);
+
+thEl = document.createElement('th');
+thEl.textContent = '8:00 am';
+trEl.appendChild(thEl);
+
+thEl = document.createElement('th');
+thEl.textContent = '9:00 am';
+trEl.appendChild(thEl);
+
+thEl = document.createElement('th');
+thEl.textContent = '10:00 am';
+trEl.appendChild(thEl);
+
+thEl = document.createElement('th');
+thEl.textContent = '11:00 am';
+trEl.appendChild(thEl);
+
+thEl = document.createElement('th');
+thEl.textContent = '12:00 pm';
+trEl.appendChild(thEl);
+
+thEl = document.createElement('th');
+thEl.textContent = '1:00 pm';
+trEl.appendChild(thEl);
+
+thEl = document.createElement('th');
+thEl.textContent = '2:00 pm';
+trEl.appendChild(thEl);
+
+thEl = document.createElement('th');
+thEl.textContent = '3:00 pm';
+trEl.appendChild(thEl);
+
+thEl = document.createElement('th');
+thEl.textContent = '4:00 pm';
+trEl.appendChild(thEl);
+
+thEl = document.createElement('th');
+thEl.textContent = '5:00 pm';
+trEl.appendChild(thEl);
+
+thEl = document.createElement('th');
+thEl.textContent = '6:00 pm';
+trEl.appendChild(thEl);
+
+thEl = document.createElement('th');
+thEl.textContent = '7:00 pm ';
+trEl.appendChild(thEl);
+
+thEl = document.createElement('th');
+thEl.textContent = 'Daily Location Total';
+trEl.appendChild(thEl);
+tbodyEl.appendChild(trEl);
+
+trEl = document.createElement('tr');
+thEl = document.createElement('th');
+thEl.textContent = 'Seattle';
+trEl.appendChild(thEl);
+tdEl = document.createElement('td');
+tdEl.textContent = seattle.cookiesEachHour[0];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = seattle.cookiesEachHour[1];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = seattle.cookiesEachHour[2];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = seattle.cookiesEachHour[3];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = seattle.cookiesEachHour[4];
+trEl.appendChild(tdEl);
+tbodyEl.appendChild(trEl);
+tdEl = document.createElement('td');
+tdEl.textContent = seattle.cookiesEachHour[5];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = seattle.cookiesEachHour[6];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = seattle.cookiesEachHour[7];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = seattle.cookiesEachHour[8];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = seattle.cookiesEachHour[9];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = seattle.cookiesEachHour[10];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = seattle.cookiesEachHour[11];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = seattle.cookiesEachHour[12];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = seattle.cookiesEachHour[13];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = seattle.totalCookiesForTheDay;
+trEl.appendChild(tdEl);
+trEl = document.createElement('tr');
+thEl = document.createElement('th');
+thEl.textContent = 'Tokyo';
+trEl.appendChild(thEl);
+tdEl = document.createElement('td');
+tdEl.textContent = tokyo.cookiesEachHour[0];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = tokyo.cookiesEachHour[1];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = tokyo.cookiesEachHour[2];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = tokyo.cookiesEachHour[3];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = tokyo.cookiesEachHour[4];
+trEl.appendChild(tdEl);
+tbodyEl.appendChild(trEl);
+tdEl = document.createElement('td');
+tdEl.textContent = tokyo.cookiesEachHour[5];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = tokyo.cookiesEachHour[6];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = tokyo.cookiesEachHour[7];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = tokyo.cookiesEachHour[8];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = tokyo.cookiesEachHour[9];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = tokyo.cookiesEachHour[10];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = tokyo.cookiesEachHour[11];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = tokyo.cookiesEachHour[12];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = tokyo.cookiesEachHour[13];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = tokyo.totalCookiesForTheDay;
+trEl.appendChild(tdEl);
+
+tbodyEl.appendChild(trEl);
+
+trEl = document.createElement('tr');
+thEl = document.createElement('th');
+thEl.textContent = 'Dubai';
+trEl.appendChild(thEl);
+tdEl = document.createElement('td');
+tdEl.textContent = Dubai.cookiesEachHour[0];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = Dubai.cookiesEachHour[1];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = Dubai.cookiesEachHour[2];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = Dubai.cookiesEachHour[3];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = Dubai.cookiesEachHour[4];
+trEl.appendChild(tdEl);
+tbodyEl.appendChild(trEl);
+tdEl = document.createElement('td');
+tdEl.textContent = Dubai.cookiesEachHour[5];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = Dubai.cookiesEachHour[6];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = Dubai.cookiesEachHour[7];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = Dubai.cookiesEachHour[8];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = Dubai.cookiesEachHour[9];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = Dubai.cookiesEachHour[10];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = Dubai.cookiesEachHour[11];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = Dubai.cookiesEachHour[12];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = Dubai.cookiesEachHour[13];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = Dubai.totalCookiesForTheDay;
+trEl.appendChild(tdEl);
+
+tbodyEl.appendChild(trEl);
+
+trEl = document.createElement('tr');
+thEl = document.createElement('th');
+thEl.textContent = 'Lima';
+trEl.appendChild(thEl);
+tdEl = document.createElement('td');
+tdEl.textContent = Lima.cookiesEachHour[0];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = Lima.cookiesEachHour[1];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = Lima.cookiesEachHour[2];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = Lima.cookiesEachHour[3];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = Lima.cookiesEachHour[4];
+trEl.appendChild(tdEl);
+tbodyEl.appendChild(trEl);
+tdEl = document.createElement('td');
+tdEl.textContent = Lima.cookiesEachHour[5];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = Lima.cookiesEachHour[6];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = Lima.cookiesEachHour[7];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = Lima.cookiesEachHour[8];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = Lima.cookiesEachHour[9];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = Lima.cookiesEachHour[10];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = Lima.cookiesEachHour[11];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = Lima.cookiesEachHour[12];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = Lima.cookiesEachHour[13];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = Lima.totalCookiesForTheDay;
+trEl.appendChild(tdEl);
+tbodyEl.appendChild(trEl);
+
+trEl = document.createElement('tr');
+thEl = document.createElement('th');
+thEl.textContent = 'Totals';
+trEl.appendChild(thEl);
+tdEl = document.createElement('td');
+tdEl.textContent = seattle.cookiesEachHour[0] + tokyo.cookiesEachHour[0] + Dubai.cookiesEachHour[0] + Lima.cookiesEachHour[0];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = seattle.cookiesEachHour[1] + tokyo.cookiesEachHour[1] + Dubai.cookiesEachHour[1] + Lima.cookiesEachHour[1];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = seattle.cookiesEachHour[2] + tokyo.cookiesEachHour[2] + Dubai.cookiesEachHour[2] + Lima.cookiesEachHour[2];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = seattle.cookiesEachHour[3] + tokyo.cookiesEachHour[3] + Dubai.cookiesEachHour[3] + Lima.cookiesEachHour[3];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = seattle.cookiesEachHour[4] + tokyo.cookiesEachHour[4] + Dubai.cookiesEachHour[4] + Lima.cookiesEachHour[4];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = seattle.cookiesEachHour[5] + tokyo.cookiesEachHour[5] + Dubai.cookiesEachHour[5] + Lima.cookiesEachHour[5];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = seattle.cookiesEachHour[6] + tokyo.cookiesEachHour[6] + Dubai.cookiesEachHour[6] + Lima.cookiesEachHour[6];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = seattle.cookiesEachHour[7] + tokyo.cookiesEachHour[7] + Dubai.cookiesEachHour[7] + Lima.cookiesEachHour[7];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = seattle.cookiesEachHour[8] + tokyo.cookiesEachHour[8] + Dubai.cookiesEachHour[8] + Lima.cookiesEachHour[8];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = seattle.cookiesEachHour[9] + tokyo.cookiesEachHour[9] + Dubai.cookiesEachHour[9] + Lima.cookiesEachHour[9];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = seattle.cookiesEachHour[10] + tokyo.cookiesEachHour[10] + Dubai.cookiesEachHour[10] + Lima.cookiesEachHour[10];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = seattle.cookiesEachHour[11] + tokyo.cookiesEachHour[11] + Dubai.cookiesEachHour[11] + Lima.cookiesEachHour[11];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = seattle.cookiesEachHour[12] + tokyo.cookiesEachHour[12] + Dubai.cookiesEachHour[12] + Lima.cookiesEachHour[12];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = seattle.cookiesEachHour[13] + tokyo.cookiesEachHour[13] + Dubai.cookiesEachHour[13] + Lima.cookiesEachHour[13];
+trEl.appendChild(tdEl);
+tdEl = document.createElement('td');
+tdEl.textContent = seattle.totalCookiesForTheDay + tokyo.totalCookiesForTheDay + Dubai.totalCookiesForTheDay + Lima.totalCookiesForTheDay;
+trEl.appendChild(tdEl);
+
+tbodyEl.appendChild(trEl);
+
+table.appendChild(tbodyEl);
 
 
 
 
 
 
-
-
-
-
-// //dubai customers
-// var DubaiCustomers = {
-//   minCustomerEachHour: 11,
-//   maxCustomerEachHour: 38,
-//   averageCookiesPerCustomer: 3.7,
-//   customersEachHour: [],
-//   cookiesEachHour: [],
-//   totalCookiesForTheDay: 0,
-
-// }
-// for (var i = 0; i < openHours.length; i++) {
-//   var num = Math.ceil(randomNumberDubaiCustomer(DubaiCustomers.maxCustomerEachHour, DubaiCustomers.minCustomerEachHour) * DubaiCustomers.averageCookiesPerCustomer);
-//   DubaiCustomers.customersEachHour.push(num);
-// }
-
-// function randomeNumberDubaicustomer(max, min) {
-//   max = Math.ceil(max);
-//   min = Math.floor(min);
-//   console.log(Math.ceil(Math.random() * (max - min)) + min);
-//   return Math.ceil(Math.random() * (max - min)) + min;
-// }
-// randomeNumberDubaicustomer(11, 38);
-// //paris customers 
-
-// var Pariscustomers = {
-//   minCustomerEachHour: 20,
-//   maxCustomerEachHour: 38,
-//   averageCookiesPerCustomer: 2.3,
-//   customersEachHour: [],
-//   cookiesEachHour: [],
-//   totalCookiesForTheDay: 0,
-
-// }
-// for (var i = 0; i < openHours.length; i++) {
-//   var num = Math.ceil(randomNumberParisCustomer(Pariscustomers.minCustomerEachHour, Pariscustomers.maxCustomerEachHour) * Pariscustomers.averageCookiesPerCustomer);
-//   Pariscustomers.customersEachHour.push(num);
-// }
-
-// function randomNumberParisCustomer(max, min) {
-//   max = Math.ceil(max);
-//   min = Math.floor(min);
-//   console.log(Math.ceil(Math.random() * (max - min)) + min);
-//   return Math.ceil(Math.random() * (max - min)) + min;
-// }
-// randomNumberParisCustomer(20, 38);
-// //Lima customers
-// var LimaCustomers = {
-//   minCustomerEachHour: 20,
-//   maxCustomerEachHour: 38,
-//   averageCookiesPerCustomer: 2.3,
-//   customersEachHour: [],
-//   cookiesEachHour: [],
-//   totalCookiesForTheDay: 0,
-// }
-// for (var i = 0; i < openHours.length; i++) {
-//   var num = Math.ceil(randomNumberLimaCustomers(LimaCustomers.minCustomerEachHour, LimaCustomers.maxCustomerEachHour) * averageCookiesPerCustomer);
-//   LimaCustomers.customersEachHour.push(num);
-// }
-
-// function randomNumberLimaCustomers(max, min) {
-//   max = Math.ceil(max);
-//   min = Math.floor(min);
-//   console.logMath.ceil((Math.random() * (max - min)) + min);
-//   return Math.ceil(Math.random() * (max - min)) + min;
-// }
-// randomNumberLimaCustomers(2, 16);
