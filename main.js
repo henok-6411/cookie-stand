@@ -49,7 +49,6 @@ var renderHeaderRow = function () {
   Store.tableEl.appendChild(trEl);
 }
 Store.prototype.renderShopeRow = function () {
-  console.log(this.cookiesSoldEachHourArray);
   var trEl = document.createElement('tr');
   var thEl = document.createElement('th');
   thEl.textContent = this.storeName;
@@ -67,9 +66,9 @@ Store.prototype.renderShopeRow = function () {
 }
 var renderFooterRow = function () {
   var trEl = document.createElement('tr');
-  var tdEl = document.createElement('td');
-  tdEl.textContent = 'Hourly total'
-  trEl.appendChild(tdEl);
+  var thEl = document.createElement('th');
+  thEl.textContent = 'Hourly total'
+  trEl.appendChild(thEl);
   for (var i = 0; i < Store.openHours.length; i++) {
     var hourlyTotal = 0;
     var tdEl = document.createElement('td');
@@ -93,10 +92,10 @@ renderHeaderRow();
 
 
 new Store('seattle', 23, 65, 6.3);
-new Store('Tokyo', '3', '24', '1.2');
-new Store('Dubai', '11', '38', '3.7');
-new Store('Paris', '20', '38', '2.3');
-new Store('Lima', '2', '16', '4.6');
+new Store('Tokyo', 3, 24, 1.2);
+new Store('Dubai', 11, 38, 3.7);
+new Store('Paris', 20, 38, 2.3);
+new Store('Lima', 2, 16, 4.6);
 renderFooterRow();
 
 
