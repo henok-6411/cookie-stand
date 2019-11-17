@@ -30,7 +30,7 @@ Store.prototype.calculateCookiesHourly = function () {
     var cookis = Math.ceil(this.averageCookiesPerCustomer * getRandome(this.minCustomersPerHour, this.maxCustomersPerHour));
     this.cookiesSoldEachHourArray.push(cookis);
     this.totalCookiesPerDay += cookis;
-    Store.allStoresTotal += cookis;
+    Store.allStoresTotal += this.totalCookiesPerDay;     //cookis
   }
 }
 var renderHeaderRow = function () {
