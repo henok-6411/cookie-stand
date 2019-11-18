@@ -98,7 +98,16 @@ new Store('Paris', 20, 38, 2.3);
 new Store('Lima', 2, 16, 4.6);
 renderFooterRow();
 
+var userform = document.getElementById('user-form');
+userform.addEventListener('submit', handlesubmit);
 
+function handlesubmit(event) {
+  event.preventdefault();
+  var mincust = event.target.inputMinCustomer.value;
+  var maxCust = event.target.inputMaxCustomer.value;
+  var AveCookie = event.target.AverageCookieElem.value;
+  var locaName = event.target.LocationNameEle.value;
+}
 
 
 
