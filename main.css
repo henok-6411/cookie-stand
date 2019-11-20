@@ -1,0 +1,31 @@
+
+img{ 
+  position: absolute;
+  opacity:0.6; filter:drop-shadow();          
+  top: 200px;
+}
+  
+
+#cookiesTable {
+  border: thick solid black;
+  border-collapse: collapse;
+  width: 800px;
+  height: 200px;
+margin-top: 10px;
+  
+}
+td{
+  border: 2px solid lightgray;
+}
+th{
+  border: 2px solid lightgray;
+}
+#userinterface{
+  border: thick solid black;
+  width: 760px;
+  height: 100px;
+  font-size: 20px;
+  font-family: sans-serif;
+ 
+
+}

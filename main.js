@@ -96,18 +96,60 @@ new Store('Tokyo', 3, 24, 1.2);
 new Store('Dubai', 11, 38, 3.7);
 new Store('Paris', 20, 38, 2.3);
 new Store('Lima', 2, 16, 4.6);
+
+
 renderFooterRow();
 
-var userform = document.getElementById('user-form');
-userform.addEventListener('submit', handlesubmit);
+var userForm = document.getElementById('user-form');
+userForm.addEventListener('submit', handleSubmit);
 
-function handlesubmit(event) {
-  event.preventdefault();
-  var mincust = event.target.inputMinCustomer.value;
-  var maxCust = event.target.inputMaxCustomer.value;
-  var AveCookie = event.target.AverageCookieElem.value;
-  var locaName = event.target.LocationNameEle.value;
+function handleSubmit(event) {
+  event.preventDefault();
+  var minCustomersPerHour = event.target.inputMinCustomer.value;
+  var maxCustomersPerHour = event.target.inputMaxCustomer.value;
+  var averageCookiesPerCustomer = event.target.AverageCookieElem.value;
+  var storeName = event.target.LocationNameEle.value;
+
+
+  // console.log('minCustomers:', mincust);
+  // console.log('maxCustomers:', maxCust);
+  // console.log('Ave Cookies', AveCookie);
+  //console.log('Location name:', locaName);
+  if (!minCustomersPerHour || !minCustomersPerHour || !averageCookiesPerCustomer || !storeName) {
+    return alert(' field must be answerd');
+  }
+  if (isNaN(minCustomersPerHour)) {
+    event.target.inputMinCustomer.value = null;
+    return alert('please enter a number for min customer');
+  }
+  if (isNaN(maxCustomersPerHour)) {
+    event.target.inputMaxCustomer.value = null;
+    return alert('please enter a number for max customer');
+  }
+  if (isNaN(averageCookiesPerCustomer)) {
+    event.target.AverageCookieElem.value = null;
+    return alert('please enter a number for average cookies');
+  }
+  if (minCustomersPerHour > maxCustomersPerHour) {
+    event.target.inputMinCustomer.value = null;
+    return alert('your min customer must be less than max customer');
+  }
+  if (minCustomersPerHour < 0 || maxCustomersPerHour < 0 || averageCookiesPerCustomer < 0) {
+    event.target.inputMinCustomer.value = null;
+    event.target.inputMaxCustomer.value = null;
+    event.target.AverageCookieElem.value = null;
+    return alert('your number answer must be positive');
+  }
+  Store.tableEl.deleteRow(-1);
+  new Store(storeName, +minCustomersPerHour, +maxCustomersPerHour, +averageCookiesPerCustomer);
+
+  renderFooterRow();
+  event.target.LocationNameEle.value = null;
+  alert(`this are ${storeName}'s ${minCustomersPerHour}min customers , ${maxCustomersPerHour}max customers  and ${averageCookiesPerCustomer}average cookies sold.`);
+
+
 }
+
 
 
 
