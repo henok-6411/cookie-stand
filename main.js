@@ -17,8 +17,6 @@ function Store(storeName, minCustomersPerHour, maxCustomersPerHour, averageCooki
   this.calculateCookiesHourly();
   this.renderShopeRow();
   Store.allStores.push(this);
-
-
 }
 
 var getRandome = function (min, max) {
