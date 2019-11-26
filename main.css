@@ -2,10 +2,13 @@
 #salesbody{
   background-image: url("water image .webp" );
 }
+
 #userinterface{
   background-color: lightyellow;
 }
-
+#indeximg{
+  background-color: lightyellow;
+}
 
 h1{
   font-family: sans-serif;
